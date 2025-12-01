@@ -12,7 +12,12 @@
       }
 
       body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
         background: linear-gradient(to bottom right, #f0fdf4, #e0f2e0, #fef08a);
         min-height: 100vh;
         color: #1f2937;
@@ -47,7 +52,6 @@
         color: #4b5563;
         font-size: 0.95rem;
       }
-
 
       .container {
         max-width: 1024px;
@@ -286,7 +290,6 @@
         color: #065f46;
       }
 
-
       .results-column {
         display: flex;
         flex-direction: column;
@@ -467,80 +470,90 @@
               <button class="btn-clear" onclick="resetForm()">Clear All</button>
             </div>
 
-          <div class="form-group">
-            <label for="loanAmount">Mortgage Amount</label>
-            <div class="input-wrapper">
-              <span class="input-addon prefix">$</span>
-              <input
-                id="loanAmount"
-                type="number"
-                class="with-prefix"
-                placeholder="250000"
-                value="250000"
-              />
-            </div>
-            <div class="error-message" id="loanAmountError"></div>
-          </div>
-
-          <div class="form-group two-col">
-            <div>
-              <label for="loanTerm">Mortgage Term</label>
+            <div class="form-group">
+              <label for="loanAmount">Mortgage Amount</label>
               <div class="input-wrapper">
+                <span class="input-addon prefix">$</span>
                 <input
-                  id="loanTerm"
+                  id="loanAmount"
                   type="number"
-                  placeholder="30"
-                  value="30"
+                  class="with-prefix"
+                  placeholder="250000"
+                  value="250000"
                 />
               </div>
-              <div class="error-message" id="loanTermError"></div>
+              <div class="error-message" id="loanAmountError"></div>
             </div>
 
-            <div>
-              <label for="interestRate">Interest Rate (%)</label>
-              <div class="input-wrapper">
-                <input
-                  id="interestRate"
-                  type="number"
-                  class="with-suffix"
-                  placeholder="6.5"
-                  value="6.5"
-                  step="0.01"
-                />
-                <span class="input-addon suffix">%</span>
+            <div class="form-group two-col">
+              <div>
+                <label for="loanTerm">Mortgage Term</label>
+                <div class="input-wrapper">
+                  <input
+                    id="loanTerm"
+                    type="number"
+                    placeholder="30"
+                    value="30"
+                  />
+                </div>
+                <div class="error-message" id="loanTermError"></div>
               </div>
-              <div class="error-message" id="interestRateError"></div>
-            </div>
-          </div>
 
-          <div class="form-group">
-            <label>Mortgage Type</label>
-            <div class="mortgage-type-group">
-              <button
-                class="mortgage-btn active"
-                data-type="repayment"
-                onclick="setMortgageType('repayment')"
-              >
-                Repayment
-              </button>
-              <button
-                class="mortgage-btn"
-                data-type="interest-only"
-                onclick="setMortgageType('interest-only')"
-              >
-                Interest Only
+              <div>
+                <label for="interestRate">Interest Rate (%)</label>
+                <div class="input-wrapper">
+                  <input
+                    id="interestRate"
+                    type="number"
+                    class="with-suffix"
+                    placeholder="6.5"
+                    value="6.5"
+                    step="0.01"
+                  />
+                  <span class="input-addon suffix">%</span>
+                </div>
+                <div class="error-message" id="interestRateError"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Mortgage Type</label>
+              <div class="mortgage-type-group">
+                <button
+                  class="mortgage-btn active"
+                  data-type="repayment"
+                  onclick="setMortgageType('repayment')"
+                >
+                  Repayment
+                </button>
+                <button
+                  class="mortgage-btn"
+                  data-type="interest-only"
+                  onclick="setMortgageType('interest-only')"
+                >
+                  Interest Only
+                </button>
+              </div>
+            </div>
+
+            <div class="button-group">
+              <button class="btn btn-primary" onclick="calculateMortgage()">
+                <svg
+                  class="btn-icon"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  />
+                </svg>
+                Calculate Repayments
               </button>
             </div>
-          </div>
-
-          <div class="button-group">
-            <button class="btn btn-primary" onclick="calculateMortgage()">
-              <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-              Calculate Repayments
-            </button>
-          </div>
           </div>
 
           <!-- Results Section -->
@@ -549,11 +562,7 @@
 
             <div class="empty-state" id="emptyState">
               <div class="empty-state-icon">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -587,7 +596,9 @@
               <div class="summary-box">
                 <div class="summary-row">
                   <span class="summary-label">Loan Amount:</span>
-                  <span class="summary-value" id="summaryLoanAmount">$0.00</span>
+                  <span class="summary-value" id="summaryLoanAmount"
+                    >$0.00</span
+                  >
                 </div>
                 <div class="summary-row">
                   <span class="summary-label">Interest Rate:</span>
@@ -595,11 +606,15 @@
                 </div>
                 <div class="summary-row">
                   <span class="summary-label">Loan Term:</span>
-                  <span class="summary-value" id="summaryLoanTerm">0 years</span>
+                  <span class="summary-value" id="summaryLoanTerm"
+                    >0 years</span
+                  >
                 </div>
                 <div class="summary-row">
                   <span class="summary-label">Mortgage Type:</span>
-                  <span class="summary-value" id="summaryMortgageType">Repayment</span>
+                  <span class="summary-value" id="summaryMortgageType"
+                    >Repayment</span
+                  >
                 </div>
               </div>
             </div>
@@ -609,24 +624,24 @@
     </div>
 
     <script>
-      let currentMortgageType = 'repayment';
+      let currentMortgageType = "repayment";
 
       function setMortgageType(type) {
         currentMortgageType = type;
-        
+
         // Update button styles
-        document.querySelectorAll('.mortgage-btn').forEach(btn => {
-          btn.classList.remove('active');
+        document.querySelectorAll(".mortgage-btn").forEach((btn) => {
+          btn.classList.remove("active");
           if (btn.dataset.type === type) {
-            btn.classList.add('active');
+            btn.classList.add("active");
           }
         });
       }
 
       function formatCurrency(value) {
-        return new Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD',
+        return new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
           minimumFractionDigits: 2,
           maximumFractionDigits: 2,
         }).format(value);
@@ -634,52 +649,52 @@
 
       function validateForm() {
         const errors = {};
-        const loanAmount = document.getElementById('loanAmount').value;
-        const interestRate = document.getElementById('interestRate').value;
-        const loanTerm = document.getElementById('loanTerm').value;
+        const loanAmount = document.getElementById("loanAmount").value;
+        const interestRate = document.getElementById("interestRate").value;
+        const loanTerm = document.getElementById("loanTerm").value;
 
         // Clear all error messages
-        document.getElementById('loanAmountError').classList.remove('show');
-        document.getElementById('interestRateError').classList.remove('show');
-        document.getElementById('loanTermError').classList.remove('show');
+        document.getElementById("loanAmountError").classList.remove("show");
+        document.getElementById("interestRateError").classList.remove("show");
+        document.getElementById("loanTermError").classList.remove("show");
 
         if (!loanAmount) {
-          errors.loanAmount = 'Loan amount is required';
+          errors.loanAmount = "Loan amount is required";
         } else if (isNaN(Number(loanAmount)) || Number(loanAmount) <= 0) {
-          errors.loanAmount = 'Please enter a valid loan amount';
+          errors.loanAmount = "Please enter a valid loan amount";
         }
 
         if (!interestRate) {
-          errors.interestRate = 'Interest rate is required';
+          errors.interestRate = "Interest rate is required";
         } else if (isNaN(Number(interestRate)) || Number(interestRate) < 0) {
-          errors.interestRate = 'Please enter a valid interest rate';
+          errors.interestRate = "Please enter a valid interest rate";
         }
 
         if (!loanTerm) {
-          errors.loanTerm = 'Loan term is required';
+          errors.loanTerm = "Loan term is required";
         } else if (
           isNaN(Number(loanTerm)) ||
           Number(loanTerm) <= 0 ||
           !Number.isInteger(Number(loanTerm))
         ) {
-          errors.loanTerm = 'Please enter a valid loan term in years';
+          errors.loanTerm = "Please enter a valid loan term in years";
         }
 
         // Display error messages
         if (errors.loanAmount) {
-          const errorEl = document.getElementById('loanAmountError');
+          const errorEl = document.getElementById("loanAmountError");
           errorEl.textContent = errors.loanAmount;
-          errorEl.classList.add('show');
+          errorEl.classList.add("show");
         }
         if (errors.interestRate) {
-          const errorEl = document.getElementById('interestRateError');
+          const errorEl = document.getElementById("interestRateError");
           errorEl.textContent = errors.interestRate;
-          errorEl.classList.add('show');
+          errorEl.classList.add("show");
         }
         if (errors.loanTerm) {
-          const errorEl = document.getElementById('loanTermError');
+          const errorEl = document.getElementById("loanTermError");
           errorEl.textContent = errors.loanTerm;
-          errorEl.classList.add('show');
+          errorEl.classList.add("show");
         }
 
         return Object.keys(errors).length === 0;
@@ -690,9 +705,11 @@
           return;
         }
 
-        const principal = Number(document.getElementById('loanAmount').value);
-        const annualRate = Number(document.getElementById('interestRate').value);
-        const years = Number(document.getElementById('loanTerm').value);
+        const principal = Number(document.getElementById("loanAmount").value);
+        const annualRate = Number(
+          document.getElementById("interestRate").value,
+        );
+        const years = Number(document.getElementById("loanTerm").value);
         const monthlyRate = annualRate / 100 / 12;
         const numberOfPayments = years * 12;
 
@@ -700,7 +717,7 @@
         let totalPayment = 0;
         let totalInterest = 0;
 
-        if (currentMortgageType === 'repayment') {
+        if (currentMortgageType === "repayment") {
           if (monthlyRate === 0) {
             monthlyPayment = principal / numberOfPayments;
           } else {
@@ -723,48 +740,48 @@
         totalInterest = Math.round(totalInterest * 100) / 100;
 
         // Update results
-        document.getElementById('monthlyPayment').textContent =
+        document.getElementById("monthlyPayment").textContent =
           formatCurrency(monthlyPayment);
-        document.getElementById('totalPayment').textContent =
+        document.getElementById("totalPayment").textContent =
           formatCurrency(totalPayment);
-        document.getElementById('totalInterest').textContent =
+        document.getElementById("totalInterest").textContent =
           formatCurrency(totalInterest);
 
         // Update summary
-        document.getElementById('summaryLoanAmount').textContent =
+        document.getElementById("summaryLoanAmount").textContent =
           formatCurrency(principal);
-        document.getElementById('summaryInterestRate').textContent =
-          Number(annualRate).toFixed(2) + '%';
-        document.getElementById('summaryLoanTerm').textContent =
-          years + ' years';
-        document.getElementById('summaryMortgageType').textContent =
-          currentMortgageType === 'repayment' ? 'Repayment' : 'Interest Only';
+        document.getElementById("summaryInterestRate").textContent =
+          Number(annualRate).toFixed(2) + "%";
+        document.getElementById("summaryLoanTerm").textContent =
+          years + " years";
+        document.getElementById("summaryMortgageType").textContent =
+          currentMortgageType === "repayment" ? "Repayment" : "Interest Only";
 
         // Show results and hide empty state
-        document.getElementById('emptyState').style.display = 'none';
-        document.getElementById('resultsGrid').classList.add('show');
+        document.getElementById("emptyState").style.display = "none";
+        document.getElementById("resultsGrid").classList.add("show");
       }
 
       function resetForm() {
-        document.getElementById('loanAmount').value = '250000';
-        document.getElementById('interestRate').value = '6.5';
-        document.getElementById('loanTerm').value = '30';
-        
+        document.getElementById("loanAmount").value = "250000";
+        document.getElementById("interestRate").value = "6.5";
+        document.getElementById("loanTerm").value = "30";
+
         // Reset mortgage type to repayment
-        setMortgageType('repayment');
+        setMortgageType("repayment");
 
         // Clear error messages
-        document.getElementById('loanAmountError').classList.remove('show');
-        document.getElementById('interestRateError').classList.remove('show');
-        document.getElementById('loanTermError').classList.remove('show');
+        document.getElementById("loanAmountError").classList.remove("show");
+        document.getElementById("interestRateError").classList.remove("show");
+        document.getElementById("loanTermError").classList.remove("show");
 
         // Hide results
-        document.getElementById('emptyState').style.display = 'flex';
-        document.getElementById('resultsGrid').classList.remove('show');
+        document.getElementById("emptyState").style.display = "flex";
+        document.getElementById("resultsGrid").classList.remove("show");
       }
 
       // Initialize mortgage type on page load
-      setMortgageType('repayment');
+      setMortgageType("repayment");
     </script>
   </body>
 </html>

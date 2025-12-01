@@ -201,7 +201,10 @@ export default function Index() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="loanTerm" className="text-gray-700 font-medium">
+                  <Label
+                    htmlFor="loanTerm"
+                    className="text-gray-700 font-medium"
+                  >
                     Loan Term (Years)
                   </Label>
                   <Input
@@ -290,7 +293,7 @@ export default function Index() {
                   {/* Total Payment */}
                   <div className="bg-gray-100 rounded-lg p-6 border border-gray-200">
                     <p className="text-gray-600 text-sm font-medium mb-1">
-                      Total Amount Paid
+                      Total You will pay over the Term
                     </p>
                     <p className="text-2xl sm:text-3xl font-bold text-gray-900">
                       {formatCurrency(result.totalPayment)}
