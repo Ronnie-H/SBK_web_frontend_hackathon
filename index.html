@@ -484,6 +484,19 @@
 
           <div class="form-group two-col">
             <div>
+              <label for="loanTerm">Mortgage Term</label>
+              <div class="input-wrapper">
+                <input
+                  id="loanTerm"
+                  type="number"
+                  placeholder="30"
+                  value="30"
+                />
+              </div>
+              <div class="error-message" id="loanTermError"></div>
+            </div>
+
+            <div>
               <label for="interestRate">Interest Rate (%)</label>
               <div class="input-wrapper">
                 <input
@@ -497,19 +510,6 @@
                 <span class="input-addon suffix">%</span>
               </div>
               <div class="error-message" id="interestRateError"></div>
-            </div>
-
-            <div>
-              <label for="loanTerm">Mortgage Term</label>
-              <div class="input-wrapper">
-                <input
-                  id="loanTerm"
-                  type="number"
-                  placeholder="30"
-                  value="30"
-                />
-              </div>
-              <div class="error-message" id="loanTermError"></div>
             </div>
           </div>
 
