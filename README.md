@@ -1,4 +1,4 @@
-This is a hackathon Web Challenge 
+This is a Hackathon Web Challenge 
 
 The main aim it to create a mortgage calculator app using ai tools for automation and a bit of HTML, CSS and javascript , a bit of json for code review
 
@@ -7,3 +7,5 @@ I have decided to build the the web frontend using AI tools e.g. Chatgpt then ma
 The changes made on my builder.io side can be pushed to Githug directly.
 
 The site is deployed on netlify with the link here : https://sbkwebhackathon.netlify.app/
+
+And as someone once told me "As long as it works , don't touch it"
