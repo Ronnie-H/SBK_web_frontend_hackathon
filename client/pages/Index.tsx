@@ -177,53 +177,54 @@ export default function Index() {
                 )}
               </div>
 
-              {/* Interest Rate */}
-              <div className="space-y-2">
-                <Label
-                  htmlFor="interestRate"
-                  className="text-gray-700 font-medium"
-                >
-                  Annual Interest Rate (%)
-                </Label>
-                <div className="relative">
+              {/* Interest Rate and Loan Term Row */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <Label
+                    htmlFor="interestRate"
+                    className="text-gray-700 font-medium"
+                  >
+                    Annual Interest Rate (%)
+                  </Label>
+                  <div className="relative">
+                    <Input
+                      id="interestRate"
+                      type="number"
+                      placeholder="6.5"
+                      step="0.01"
+                      value={interestRate}
+                      onChange={(e) => setInterestRate(e.target.value)}
+                      className="text-base"
+                    />
+                    <span className="absolute right-3 top-3 text-gray-500 font-medium">
+                      %
+                    </span>
+                  </div>
+                  {submitted && errors.interestRate && (
+                    <p className="text-red-500 text-sm font-medium">
+                      {errors.interestRate}
+                    </p>
+                  )}
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="loanTerm" className="text-gray-700 font-medium">
+                    Loan Term (Years)
+                  </Label>
                   <Input
-                    id="interestRate"
+                    id="loanTerm"
                     type="number"
-                    placeholder="6.5"
-                    step="0.01"
-                    value={interestRate}
-                    onChange={(e) => setInterestRate(e.target.value)}
+                    placeholder="30"
+                    value={loanTerm}
+                    onChange={(e) => setLoanTerm(e.target.value)}
                     className="text-base"
                   />
-                  <span className="absolute right-3 top-3 text-gray-500 font-medium">
-                    %
-                  </span>
+                  {submitted && errors.loanTerm && (
+                    <p className="text-red-500 text-sm font-medium">
+                      {errors.loanTerm}
+                    </p>
+                  )}
                 </div>
-                {submitted && errors.interestRate && (
-                  <p className="text-red-500 text-sm font-medium">
-                    {errors.interestRate}
-                  </p>
-                )}
-              </div>
-
-              {/* Loan Term */}
-              <div className="space-y-2">
-                <Label htmlFor="loanTerm" className="text-gray-700 font-medium">
-                  Loan Term (Years)
-                </Label>
-                <Input
-                  id="loanTerm"
-                  type="number"
-                  placeholder="30"
-                  value={loanTerm}
-                  onChange={(e) => setLoanTerm(e.target.value)}
-                  className="text-base"
-                />
-                {submitted && errors.loanTerm && (
-                  <p className="text-red-500 text-sm font-medium">
-                    {errors.loanTerm}
-                  </p>
-                )}
               </div>
 
               {/* Mortgage Type */}
