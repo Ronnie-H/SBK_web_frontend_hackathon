@@ -1,6 +1,8 @@
 This is a Hackathon Web Challenge 
 
-The main aim it to create a mortgage calculator app using ai tools for automation and a bit of HTML, CSS and javascript , a bit of json for code review
+The main aim it to create a mortgage calculator app using ai tools for automation and a bit of HTML, CSS and javascript , a bit of json.
+
+For code review i have used a bit of Chatgpt, Copilot, Bolt AI builder and my Stack Overflow.
 
 I have decided to build the the web frontend using AI tools e.g. Chatgpt then mainly builder.io which then connects to my Github account.
 
