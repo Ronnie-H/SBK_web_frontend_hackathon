@@ -209,8 +209,7 @@
       }
 
       .btn {
-        flex: 1;
-        padding: 0.625rem 1rem;
+        padding: 0.625rem 1.5rem;
         border-radius: 0.5rem;
         font-weight: 600;
         font-size: 0.95rem;
@@ -220,22 +219,45 @@
       }
 
       .btn-primary {
-        background: linear-gradient(to right, #2563eb, #4f46e5);
+        background: linear-gradient(to right, #065f46, #047857);
         color: white;
+        flex: 1;
       }
 
       .btn-primary:hover {
-        background: linear-gradient(to right, #1d4ed8, #4338ca);
+        background: linear-gradient(to right, #064e3b, #065f46);
+        color: #fef08a;
       }
 
       .btn-secondary {
         background-color: white;
         border-color: #d1d5db;
         color: #374151;
+        flex: 1;
       }
 
       .btn-secondary:hover {
-        background-color: #f9fafb;
+        background-color: #fef08a;
+        border-color: #eab308;
+        color: #065f46;
+      }
+
+      .btn-header {
+        padding: 0.625rem 1.5rem;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        font-size: 0.95rem;
+        cursor: pointer;
+        border: 1px solid #d1d5db;
+        background-color: white;
+        color: #374151;
+        transition: all 0.2s;
+      }
+
+      .btn-header:hover {
+        background-color: #fef08a;
+        border-color: #eab308;
+        color: #065f46;
       }
 
       .results-container {
