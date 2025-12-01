@@ -8,6 +8,9 @@ I have decided to build the the web frontend using AI tools e.g. Chatgpt then ma
 
 The changes made on my builder.io side can be pushed to Githug directly.
 
-The site is deployed on netlify with the link here : https://sbkwebhackathon.netlify.app/
+The site is deployed on both netlify and github pages and with the links here : 
+
+https://sbkwebhackathon.netlify.app/ 
+https://ronnie-h.github.io/SBK_web_frontend_hackathon/
 
 And as someone once told me "As long as it works , don't touch it"
