@@ -56,14 +56,14 @@
         padding-bottom: 3rem;
       }
 
-      .grid {
+      .form-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
       }
 
       @media (max-width: 1024px) {
-        .grid {
+        .form-grid {
           grid-template-columns: 1fr;
         }
       }
@@ -244,7 +244,7 @@
       }
 
 
-      .results-container {
+      .results-column {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -415,10 +415,11 @@
 
     <!-- Main Content -->
     <div class="container">
-      <div class="grid">
-        <!-- Form Section -->
-        <div class="card">
-          <h2 class="card-title">Mortgage Calculator</h2>
+      <div class="card">
+        <div class="form-grid">
+          <!-- Form Section -->
+          <div>
+            <h2 class="card-title">Mortgage Calculator</h2>
 
           <div class="form-group">
             <label for="loanAmount">Mortgage Amount</label>
@@ -491,11 +492,10 @@
               Calculate
             </button>
           </div>
-        </div>
+          </div>
 
-        <!-- Results Section -->
-        <div class="results-container">
-          <div class="card">
+          <!-- Results Section -->
+          <div class="results-column">
             <h2 class="card-title">Your Results</h2>
 
             <div class="empty-state" id="emptyState">
