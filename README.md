@@ -10,7 +10,7 @@ The changes made on my builder.io side can be pushed to Githug directly.
 
 The site is deployed on both netlify and github pages and with the links here : 
 
-https://sbkwebhackathon.netlify.app/ 
-https://ronnie-h.github.io/SBK_web_frontend_hackathon/
+Netlify: https://sbkwebhackathon.netlify.app/ 
+Github pages: https://ronnie-h.github.io/SBK_web_frontend_hackathon/
 
 And as someone once told me "As long as it works , don't touch it"
