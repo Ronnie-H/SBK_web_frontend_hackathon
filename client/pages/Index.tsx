@@ -232,19 +232,28 @@ export default function Index() {
                 <Label className="text-gray-700 font-medium">
                   Mortgage Type
                 </Label>
-                <Select value={mortgageType} onValueChange={(value) => setMortgageType(value as MortgageType)}>
-                  <SelectTrigger className="text-base">
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="repayment">
-                      Repayment (Principal + Interest)
-                    </SelectItem>
-                    <SelectItem value="interest-only">
-                      Interest Only
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
+                <div className="flex gap-3">
+                  <Button
+                    onClick={() => setMortgageType("repayment")}
+                    className={`flex-1 py-2.5 rounded-lg font-semibold transition-all ${
+                      mortgageType === "repayment"
+                        ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
+                        : "bg-gray-100 border border-gray-300 text-gray-700 hover:bg-gray-200"
+                    }`}
+                  >
+                    Repayment
+                  </Button>
+                  <Button
+                    onClick={() => setMortgageType("interest-only")}
+                    className={`flex-1 py-2.5 rounded-lg font-semibold transition-all ${
+                      mortgageType === "interest-only"
+                        ? "bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white"
+                        : "bg-gray-100 border border-gray-300 text-gray-700 hover:bg-gray-200"
+                    }`}
+                  >
+                    Interest Only
+                  </Button>
+                </div>
               </div>
 
               {/* Buttons */}
